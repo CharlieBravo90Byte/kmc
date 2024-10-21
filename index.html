@@ -1,62 +1,65 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-	<title>Página web en mantenimiento</title>
-	<meta charset="utf-8"/>
-	<meta name="description" content="Ejemplo práctico de aplicación del posicionamiento fijo"/>
-	<meta name="author" content="francesc ricart"/>
-	<style>
-		/*TIPOGRAFÍAS*/
-		@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-		/*INICIALIZACIÓN DE ESTILOS*/
-		*{
-			margin:0;
-			padding:0;
-			box-sizing:border-box;
-		}
+    <meta charset="utf-8">
+    <meta name="description" content="Ejemplo práctico de aplicación del posicionamiento fijo">
+    <meta name="author" content="francesc ricart">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMC_3D - Página en Construcción</title>
+    <style>
+        /*TIPOGRAFÍAS*/
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+        
+        /*INICIALIZACIÓN DE ESTILOS*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		body{background-color:hsl(32, 88%, 42%);}
+        body {
+            background-color: hwb(0 99% 1%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-		/*PERSONALIZACIÓN DE P.MANTENIMIENTO*/
-		.mantenimiento{
-			width:800px;
-			height:400px;
-			padding:32px;
-			border:1px solid #000;
-			border-radius:10px;
-			margin-top:-200px;
-			margin-left:-400px;
-			background-color:#fff;
-			position:fixed;
-			top:50%;
-			left:50%;
-		}
-		.mantenimiento h1, .mantenimiento h2, .mantenimiento p{
-			font-family:"noto sans", sans-serif;
-		}
+        /*PERSONALIZACIÓN DE P.MANTENIMIENTO*/
+        .mantenimiento {
+            width: 90%;
+            max-width: 800px;
+            padding: 32px;
+            border: 1px solid #000;
+            border-radius: 30px;
+            background-color: #ff914d;
+            text-align: center;
+        }
 
-		.mantenimiento h1{
-			font-size:3em;
-			text-align:center;
-			padding:16px;
-		}
-		.mantenimiento h2{
-			font-size:2em;
-			font-style:italic;
-		}
-		.mantenimiento p{
-			margin:16px 0;
-			line-height:1.5em;
-		}
+        .mantenimiento h1 {
+            font-family: "Noto Sans", sans-serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
 
-	</style>
+        .mantenimiento p {
+            font-family: "Noto Sans", sans-serif;
+            margin: 16px 0;
+            line-height: 1.5em;
+        }
+
+        img {
+            max-width: 300px;
+            height: auto;
+            margin-top: 0px;
+        }
+    </style>
 </head>
 <body>
-	<div class="mantenimiento">
-		<h1>Nuestra página web KMC_3D está en construcción para ofrecerte la mejor experiencia muy pronto</h1>
-		<p>🔧 ¡Estamos trabajando para ti!. Mientras tanto, síguenos en nuestras redes sociales y mantente al día con todas las novedades. ¡Nos vemos allí! 🚀✨ </p>
-		
-	</div>
+    <div class="mantenimiento">
+        <img src="img/1.png" alt="KMC_3D en construcción">
+        <h1>Nuestra página web está en construcción para ofrecerte la mejor experiencia muy pronto</h1>
+        <p>✨🔧¡Estamos trabajando para ti! Mientras tanto, síguenos en nuestras redes sociales y mantente al día con todas las novedades. ¡Nos vemos allí!🚀👍</p>
+    </div>
 </body>
 </html>
