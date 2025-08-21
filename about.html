@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 <!--
     
@@ -123,20 +123,41 @@ https://templatemo.com/tm-559-zay-shop
 
 
 
-    <section class="bg-success py-5">
+    <section class="hero-3d">
         <div class="container">
             <div class="row align-items-center py-5">
-                <div class="col-md-8 text-white">
-                    <h1>About Us</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <div class="col-md-8 text-white position-relative z-index-2">
+                    <h1 class="modern-h1 mb-4">About Us</h1>
+                    <p class="modern-text text-white lead">
+                        We are innovators, dreamers, and creators pushing the boundaries of technology 
+                        and design. Our mission is to deliver cutting-edge solutions that transform 
+                        the digital landscape with style and sophistication.
                     </p>
                 </div>
-                <div class="col-md-4">
-                    <img src="assets/img/about-hero.svg" alt="About Hero">
+                <div class="col-md-4 position-relative">
+                    <div class="floating-element">
+                        <div class="glass-card p-4">
+                            <img src="assets/img/about-hero.svg" alt="About Hero" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Floating 3D Elements -->
+        <div class="floating-element" style="top: 15%; right: 10%;">
+            <div class="service-icon-3d" style="width: 60px; height: 60px;">
+                <i class="fas fa-cube"></i>
+            </div>
+        </div>
+        <div class="floating-element" style="bottom: 20%; left: 5%;">
+            <div class="service-icon-3d" style="width: 40px; height: 40px;">
+                <i class="fas fa-rocket"></i>
+            </div>
+        </div>
+        <div class="floating-element" style="top: 30%; left: 15%;">
+            <div class="service-icon-3d" style="width: 50px; height: 50px;">
+                <i class="fas fa-atom"></i>
             </div>
         </div>
     </section>
@@ -144,42 +165,62 @@ https://templatemo.com/tm-559-zay-shop
 
     <!-- Start Section -->
     <section class="container py-5">
-        <div class="row text-center pt-5 pb-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">Our Services</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    Lorem ipsum dolor sit amet.
+        <div class="row text-center pt-5 pb-5">
+            <div class="col-lg-8 m-auto animate-slide-in">
+                <h1 class="modern-h2 mb-4">Our Services</h1>
+                <p class="modern-text">
+                    Experience the future of technology with our comprehensive suite of advanced services. 
+                    We deliver innovation, excellence, and cutting-edge solutions tailored for the modern world.
                 </p>
             </div>
         </div>
-        <div class="row">
+        <div class="row g-4">
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                    <h2 class="h5 mt-4 text-center">Delivery Services</h2>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card-3d h-100 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="card-content text-center">
+                        <div class="service-icon-3d">
+                            <i class="fa fa-truck"></i>
+                        </div>
+                        <h3 class="modern-h3 mb-3">Delivery Services</h3>
+                        <p class="modern-text small">Lightning-fast delivery powered by AI-optimized logistics</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
-                    <h2 class="h5 mt-4 text-center">Shipping & Return</h2>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card-3d h-100 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="card-content text-center">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="modern-h3 mb-3">Shipping & Return</h3>
+                        <p class="modern-text small">Seamless returns with blockchain-verified tracking</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
-                    <h2 class="h5 mt-4 text-center">Promotion</h2>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card-3d h-100 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="card-content text-center">
+                        <div class="service-icon-3d">
+                            <i class="fa fa-percent"></i>
+                        </div>
+                        <h3 class="modern-h3 mb-3">Smart Promotions</h3>
+                        <p class="modern-text small">AI-driven personalized offers and dynamic pricing</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
-                    <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card-3d h-100 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="card-content text-center">
+                        <div class="service-icon-3d">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h3 class="modern-h3 mb-3">24/7 Support</h3>
+                        <p class="modern-text small">Always-on assistance with advanced chatbot integration</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -187,22 +228,22 @@ https://templatemo.com/tm-559-zay-shop
     <!-- End Section -->
 
     <!-- Start Brands -->
-    <section class="bg-light py-5">
+    <section class="py-5 position-relative" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
         <div class="container my-4">
             <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Brands</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        Lorem ipsum dolor sit amet.
+                <div class="col-lg-8 m-auto">
+                    <h1 class="modern-h2 mb-4">Our Brand Partners</h1>
+                    <p class="modern-text">
+                        Collaborating with industry leaders to deliver exceptional experiences 
+                        and innovative solutions that shape the future of technology.
                     </p>
                 </div>
-                <div class="col-lg-9 m-auto tempaltemo-carousel">
+                <div class="col-lg-10 m-auto tempaltemo-carousel">
                     <div class="row d-flex flex-row">
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
-                                <i class="text-light fas fa-chevron-left"></i>
+                            <a class="btn-3d h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev" style="padding: 0.5rem;">
+                                <i class="fas fa-chevron-left" style="color: white;"></i>
                             </a>
                         </div>
                         <!--End Controls-->
@@ -215,18 +256,26 @@ https://templatemo.com/tm-559-zay-shop
 
                                     <!--First slide-->
                                     <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        <div class="row g-3">
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_01.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_02.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_03.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_04.png" alt="Brand Logo">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -234,18 +283,26 @@ https://templatemo.com/tm-559-zay-shop
 
                                     <!--Second slide-->
                                     <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        <div class="row g-3">
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_01.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_02.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_03.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_04.png" alt="Brand Logo">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -253,18 +310,26 @@ https://templatemo.com/tm-559-zay-shop
 
                                     <!--Third slide-->
                                     <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        <div class="row g-3">
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_01.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_02.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_03.png" alt="Brand Logo">
+                                                </div>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-4">
+                                                <div class="glass-card p-3 text-center">
+                                                    <img class="img-fluid brand-img transition-smooth" src="assets/img/brand_04.png" alt="Brand Logo">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -278,8 +343,8 @@ https://templatemo.com/tm-559-zay-shop
 
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
-                                <i class="text-light fas fa-chevron-right"></i>
+                            <a class="btn-3d h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next" style="padding: 0.5rem;">
+                                <i class="fas fa-chevron-right" style="color: white;"></i>
                             </a>
                         </div>
                         <!--End Controls-->
@@ -292,49 +357,49 @@ https://templatemo.com/tm-559-zay-shop
 
 
     <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
+    <footer class="footer-modern" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                <div class="col-md-4 pt-5 fade-in-left">
+                    <h2 class="h2 border-bottom pb-3 border-light logo">Zay Shop</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li>
+                        <li class="modern-text">
                             <i class="fas fa-map-marker-alt fa-fw"></i>
                             123 Consectetur at ligula 10660
                         </li>
-                        <li>
+                        <li class="modern-text">
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                            <a class="text-decoration-none text-light transition-smooth" href="tel:010-020-0340">010-020-0340</a>
                         </li>
-                        <li>
+                        <li class="modern-text">
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                            <a class="text-decoration-none text-light transition-smooth" href="mailto:info@company.com">info@company.com</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-md-4 pt-5">
+                <div class="col-md-4 pt-5 fade-in-up">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Luxury Collection</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Sport Wear</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Men's Shoes</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Women's Shoes</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Popular Dress</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Gym Accessories</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Sport Shoes</a></li>
                     </ul>
                 </div>
 
-                <div class="col-md-4 pt-5">
+                <div class="col-md-4 pt-5 fade-in-right">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Home</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Shop Locations</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none text-light transition-smooth" href="#">Contact</a></li>
                     </ul>
                 </div>
 
@@ -342,41 +407,41 @@ https://templatemo.com/tm-559-zay-shop
 
             <div class="row text-light mb-4">
                 <div class="col-12 mb-3">
-                    <div class="w-100 my-3 border-top border-light"></div>
+                    <div class="w-100 my-3 border-top border-light opacity-25"></div>
                 </div>
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a rel="nofollow" class="text-light text-decoration-none" target="_blank" href="http://fb.com/templatemo"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border rounded-circle text-center">
+                            <a rel="nofollow" class="text-light text-decoration-none transition-smooth" target="_blank" href="http://fb.com/templatemo"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border rounded-circle text-center">
+                            <a class="text-light text-decoration-none transition-smooth" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border rounded-circle text-center">
+                            <a class="text-light text-decoration-none transition-smooth" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
                         </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border rounded-circle text-center">
+                            <a class="text-light text-decoration-none transition-smooth" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-auto">
                     <label class="sr-only" for="subscribeEmail">Email address</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                        <input type="text" class="form-control glass-enhanced border-0 text-light" id="subscribeEmail" placeholder="Email address" style="background: rgba(255,255,255,0.1);">
+                        <div class="btn-3d text-light" style="border-radius: 0 var(--radius-medium) var(--radius-medium) 0;">Subscribe</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w-100 bg-black py-3">
+        <div class="w-100 py-3" style="background: rgba(0,0,0,0.2);">
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
-                        <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com/page/1" target="_blank">TemplateMo</a>
+                        <p class="text-left text-light modern-text">
+                            Copyright &copy; 2024 Zay Shop - Future of Technology 
+                            | Designed with <span class="text-gradient">❤️</span> by <a rel="sponsored" href="https://templatemo.com/page/1" target="_blank" class="text-decoration-none" style="color: var(--color-cyber-blue);">TemplateMo</a>
                         </p>
                     </div>
                 </div>
