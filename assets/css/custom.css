@@ -1,3 +1,570 @@
 /*
-Custom Css
+===============================================
+MODERN 3D WEBSITE DESIGN SYSTEM
+===============================================
+Custom CSS for futuristic, contemporary aesthetics
+with 3D elements, glassmorphism, and metallic gradients
 */
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  /* 3D Color Palette */
+  --color-primary-blue: #0D1B2A;
+  --color-deep-blue: #1B263B;
+  --color-metallic-blue: #2E86AB;
+  --color-cyber-blue: #03DAC6;
+  --color-holographic: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  /* Metallic Grays */
+  --color-platinum: #E5E5E5;
+  --color-silver: #C0C0C0;
+  --color-gunmetal: #2A2D34;
+  --color-charcoal: #36393F;
+  
+  /* Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-metallic: linear-gradient(135deg, #C0C0C0 0%, #E5E5E5 50%, #A8A8A8 100%);
+  --gradient-holographic: linear-gradient(45deg, #667eea, #764ba2, #667eea, #03DAC6);
+  --gradient-depth: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #2E86AB 100%);
+  
+  /* Modern Typography */
+  --font-primary: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* 3D Shadow System */
+  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-deep: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-3d: 0 10px 30px rgba(0, 0, 0, 0.2), 0 1px 8px rgba(0, 0, 0, 0.1);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-backdrop: blur(20px);
+  
+  /* Animation Timings */
+  --transition-fast: 0.2s ease-out;
+  --transition-medium: 0.4s ease-out;
+  --transition-slow: 0.6s ease-out;
+  
+  /* Border Radius */
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-xl: 32px;
+}
+
+/* ===== MODERN TYPOGRAPHY SYSTEM ===== */
+.modern-h1 {
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  background: var(--gradient-holographic);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.modern-h2 {
+  font-family: var(--font-primary);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-metallic-blue);
+  text-shadow: 0 2px 10px rgba(46, 134, 171, 0.3);
+}
+
+.modern-h3 {
+  font-family: var(--font-primary);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-deep-blue);
+}
+
+.modern-text {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  color: var(--color-charcoal);
+}
+
+/* ===== 3D GLASSMORPHISM CARD SYSTEM ===== */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-3d);
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.glass-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: var(--shadow-deep);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== MODERN HERO SECTION ===== */
+.hero-3d {
+  background: var(--gradient-depth);
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.floating-element {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* ===== MODERN SERVICE CARDS ===== */
+.service-card-3d {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: var(--radius-large);
+  padding: 2rem;
+  box-shadow: var(--shadow-3d);
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card-3d::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-holographic);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: 0;
+}
+
+.service-card-3d:hover::before {
+  opacity: 0.1;
+}
+
+.service-card-3d:hover {
+  transform: translateY(-15px) rotateY(10deg) rotateX(5deg);
+  box-shadow: var(--shadow-deep);
+}
+
+.service-card-3d .card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.service-icon-3d {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-medium);
+}
+
+.service-icon-3d:hover {
+  transform: rotateY(180deg) scale(1.1);
+  box-shadow: var(--shadow-deep);
+}
+
+.service-icon-3d i {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MODERN BUTTON SYSTEM ===== */
+.btn-3d {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-medium);
+  padding: 1rem 2rem;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-medium);
+  box-shadow: var(--shadow-3d);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left var(--transition-medium);
+}
+
+.btn-3d:hover::before {
+  left: 100%;
+}
+
+.btn-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-deep);
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .service-card-3d:hover {
+    transform: translateY(-10px);
+  }
+  
+  .hero-3d {
+    min-height: 50vh;
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===== MODERN NAVIGATION ENHANCEMENTS ===== */
+.navbar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-medium);
+}
+
+.navbar-brand {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2rem !important;
+}
+
+.nav-link {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-deep-blue) !important;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: all var(--transition-fast);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-metallic-blue) !important;
+}
+
+/* Top navigation modern styling */
+#templatemo_nav_top {
+  background: var(--color-primary-blue) !important;
+  border-bottom: 1px solid var(--color-deep-blue);
+}
+
+/* ===== MODERN FOOTER STYLING ===== */
+.footer-modern {
+  background: linear-gradient(135deg, var(--color-primary-blue) 0%, var(--color-deep-blue) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footergrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23footergrid)"/></svg>');
+  opacity: 0.3;
+}
+
+.footer-modern .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-modern h2 {
+  background: var(--gradient-holographic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-icons li {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border) !important;
+  transition: all var(--transition-medium);
+}
+
+.footer-icons li:hover {
+  background: var(--gradient-primary);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ===== ENHANCED GLASSMORPHISM EFFECTS ===== */
+.glass-enhanced {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.15), 
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ===== PARALLAX AND DEPTH EFFECTS ===== */
+.parallax-container {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.depth-layer-1 {
+  transform: translateZ(0px);
+}
+
+.depth-layer-2 {
+  transform: translateZ(50px);
+}
+
+.depth-layer-3 {
+  transform: translateZ(100px);
+}
+
+/* ===== IMPROVED MOBILE RESPONSIVENESS ===== */
+@media (max-width: 992px) {
+  .floating-element {
+    display: none;
+  }
+  
+  .hero-3d {
+    min-height: 60vh;
+  }
+  
+  .modern-h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .service-card-3d {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card-3d:hover {
+    transform: translateY(-5px);
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .hero-3d {
+    min-height: 50vh;
+  }
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-element {
+    animation: none;
+  }
+}
+
+/* ===== FOCUS STATES FOR ACCESSIBILITY ===== */
+.service-card-3d:focus-within,
+.glass-card:focus-within,
+.btn-3d:focus {
+  outline: 2px solid var(--color-cyber-blue);
+  outline-offset: 2px;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.service-card-3d,
+.glass-card,
+.btn-3d {
+  will-change: transform;
+}
+
+.service-card-3d:not(:hover),
+.glass-card:not(:hover),
+.btn-3d:not(:hover) {
+  will-change: auto;
+}
