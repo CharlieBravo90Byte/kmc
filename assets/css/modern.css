@@ -1,0 +1,464 @@
+/* 
+==============================================
+MODERN KMC_3D - ELEGANT & INNOVATIVE STYLES
+==============================================
+*/
+
+/* CSS Variables for Modern Design */
+:root {
+  /* Modern Color Palette */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --orange-gradient: linear-gradient(135deg, #ff914d 0%, #ff6b35 100%);
+  --yellow-gradient: linear-gradient(135deg, #ffee02 0%, #ffd700 100%);
+  
+  /* Glass morphism */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
+  /* Shadows */
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* Typography */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Modern Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+/* Modern Hero Section */
+.modern-hero {
+  background: var(--primary-gradient);
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.modern-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.modern-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease;
+}
+
+.modern-hero h1 {
+  font-size: 3.5rem !important;
+  font-weight: var(--font-weight-bold) !important;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.modern-hero p {
+  font-size: 1.2rem !important;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.modern-hero img {
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Modern Navigation */
+.modern-nav {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all var(--transition-normal);
+}
+
+.modern-nav.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-medium);
+}
+
+.modern-nav .navbar-brand {
+  background: var(--orange-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-bold) !important;
+  transition: all var(--transition-normal);
+}
+
+.modern-nav .navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.modern-nav .nav-link {
+  position: relative;
+  transition: all var(--transition-normal);
+  font-weight: var(--font-weight-medium) !important;
+}
+
+.modern-nav .nav-link:hover {
+  color: #ff914d !important;
+  transform: translateY(-2px);
+}
+
+.modern-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--orange-gradient);
+  transition: all var(--transition-normal);
+  transform: translateX(-50%);
+}
+
+.modern-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Modern Cards */
+.modern-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: none;
+  box-shadow: var(--shadow-light);
+  position: relative;
+}
+
+.modern-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange-gradient);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.modern-card:hover::before {
+  transform: scaleX(1);
+}
+
+.modern-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-heavy);
+}
+
+.modern-card img {
+  transition: all var(--transition-slow);
+  filter: brightness(1) saturate(1);
+}
+
+.modern-card:hover img {
+  filter: brightness(1.1) saturate(1.2);
+  transform: scale(1.1);
+}
+
+.modern-card .card-body {
+  padding: 2rem;
+}
+
+.modern-card h5, .modern-card h2 {
+  font-weight: var(--font-weight-bold) !important;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Modern Buttons */
+.modern-btn {
+  background: var(--orange-gradient);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: var(--font-weight-medium) !important;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem !important;
+}
+
+.modern-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left var(--transition-slow);
+}
+
+.modern-btn:hover::before {
+  left: 100%;
+}
+
+.modern-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 145, 77, 0.4);
+  color: white;
+}
+
+/* Modern Sections */
+.modern-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.modern-section:nth-child(even) {
+  background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.modern-section h1, .modern-section h2 {
+  font-weight: var(--font-weight-bold) !important;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.modern-section h1::after, .modern-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 3px;
+  background: var(--orange-gradient);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease;
+}
+
+.animate-left.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease;
+}
+
+.animate-right.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Modern Footer */
+.modern-footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  position: relative;
+}
+
+.modern-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange-gradient);
+}
+
+.modern-footer h2 {
+  color: white !important;
+  font-weight: var(--font-weight-bold) !important;
+}
+
+.modern-footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all var(--transition-normal);
+}
+
+.modern-footer a:hover {
+  color: #ff914d;
+  transform: translateX(5px);
+}
+
+/* Top Navigation Modern Style */
+.modern-top-nav {
+  background: var(--primary-gradient);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.modern-top-nav a {
+  transition: all var(--transition-normal);
+}
+
+.modern-top-nav a:hover {
+  color: #ffee02 !important;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modern-hero h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .modern-hero p {
+    font-size: 1.1rem !important;
+  }
+  
+  .modern-section {
+    padding: 60px 0;
+  }
+  
+  .modern-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .modern-hero h1 {
+    font-size: 2rem !important;
+  }
+  
+  .modern-hero {
+    min-height: 70vh;
+  }
+  
+  .modern-section {
+    padding: 40px 0;
+  }
+}
+
+/* Loading Animation */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Enhanced Hover Effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 145, 77, 0.6);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
