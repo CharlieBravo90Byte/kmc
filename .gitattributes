@@ -1,0 +1,20 @@
+# ─── GitHub Linguist — Configuración de estadísticas de lenguaje ───────────
+# Documentación: https://github.com/github-linguist/linguist
+
+# Ignorar el sitio HTML archivado (no es código activo del proyecto)
+_old-html/ linguist-vendored=true
+
+# Ignorar archivos minificados (no son código fuente real)
+*.min.js   linguist-vendored=true
+*.min.css  linguist-vendored=true
+*.bundle.js linguist-vendored=true
+
+# Ignorar assets estáticos
+public/    linguist-vendored=true
+
+# Forzar que JSX sea reconocido como JavaScript
+*.jsx linguist-language=JavaScript
+*.tsx linguist-language=TypeScript
+
+# Forzar que los CSS Modules sean reconocidos como CSS
+*.module.css linguist-language=CSS
