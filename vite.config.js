@@ -1,15 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { resolve, dirname } from 'path'
+import { fileURLToPath } from 'url'
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/kmc/',
+  base: './',
   build: {
     rollupOptions: {
       input: {
         main:  resolve(__dirname, 'index.html'),
+        catalogo: resolve(__dirname, 'catalogo.html'),
         admin: resolve(__dirname, 'admin/index.html'),
       },
     },

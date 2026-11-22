@@ -1,19 +1,45 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/img/logo/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KMC 3D — Impresión 3D, grabado láser y estampados personalizados en Chile. Tazas, poleras, figuras y más." />
-    <meta name="keywords" content="impresión 3D, grabado láser, estampados, tazas personalizadas, poleras, KMC" />
-    <title>KMC 3D — Impresión 3D, Láser y Estampados</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Figuras 3D, tazas estampadas y recordatorios de madera hechos para regalar y coleccionar. Cotiza tu idea con KMC 3D.">
+  <meta name="theme-color" content="#101110">
+  <title>KMC 3D | Figuras que cobran vida</title>
+  <link rel="icon" href="vitrina-kmc/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vitrina-kmc/estilo.css">
+  <script src="vitrina-kmc/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">CREAMOS PIEZAS CON PERSONALIDAD <span>✦</span> FIGURAS 3D Y REGALOS PERSONALIZADOS</div>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="KMC 3D, inicio"><img src="vitrina-kmc/img/logo.png" alt="KMC 3D"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú <span>☰</span></button>
+    <nav id="nav" aria-label="Navegación principal"><a href="#figuras">Figuras 3D</a><a href="catalogo.html">Catálogo</a><a href="#categorias">Más creaciones</a><a href="#como-pedir">Cómo pedir</a><a href="https://www.instagram.com/kmc_3d/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
+    <a class="header-cta" href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20quiero%20cotizar%20una%20idea." target="_blank" rel="noopener noreferrer">Cotiza tu idea</a>
+  </header>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span></span> HECHO PARA FANS, HECHO PARA TI</p><h1>TUS IDEAS<br>EN <em>OTRA</em><br>DIMENSIÓN<span>.</span></h1><p class="hero-text">Figuras 3D que merecen un lugar en tu colección. Cuéntanos qué tienes en mente y hagámoslo realidad.</p><div class="actions"><a class="button primary" href="catalogo.html">Ver catálogo de figuras</a><a class="button outline" href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20quiero%20cotizar%20una%20figura%203D." target="_blank" rel="noopener noreferrer">Quiero cotizar</a></div><div class="hero-note"><b>✦</b> CREADO CON PASIÓN POR LOS DETALLES</div></div>
+      <div class="hero-image"><img src="vitrina-kmc/img/spider.png" alt="Figura 3D de Spider-Man, trabajo destacado de KMC 3D"><div class="image-label"><span>DESTACADO KMC</span><strong>LA PASIÓN<br>SE COLECCIONA.</strong></div></div>
+    </section>
+    <div class="ticker" aria-hidden="true"><span>FIGURAS 3D</span> ✦ <span>IDEAS QUE COBRAN VIDA</span> ✦ <span>REGALOS CON PERSONALIDAD</span> ✦ <span>HECHO POR KMC 3D</span> ✦</div>
+    <section id="figuras" class="section figures"><div class="section-heading"><div><p class="eyebrow dark">EL CORAZÓN DE KMC 3D</p><h2>PEQUEÑAS PIEZAS.<br><span>GRANDES HISTORIAS.</span></h2></div><p>Para coleccionar, regalar o tener cerca eso que te encanta. Cada idea comienza con una conversación.</p></div><div class="figure-grid"><article class="feature-card"><img src="vitrina-kmc/img/figuras.png" alt="Conjunto de figuras 3D de personajes con vestimenta navideña" loading="lazy"><div class="feature-overlay"><p>FIGURAS CON PERSONALIDAD</p><h3>Una colección<br>muy tuya.</h3><a href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20quiero%20consultar%20por%20sus%20figuras%203D." target="_blank" rel="noopener noreferrer">Consultar por figuras</a></div></article><div class="figure-aside"><p class="eyebrow dark">TU PRÓXIMA PIEZA</p><h3>¿YA TIENES UN PERSONAJE EN MENTE?</h3><p>Envíanos una imagen o cuéntanos tu idea. Conversamos sobre los detalles y te ayudamos a cotizarla.</p><a class="text-link" href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20tengo%20una%20idea%20para%20una%20figura." target="_blank" rel="noopener noreferrer">Conversemos por WhatsApp <span>↗</span></a><div class="aside-mark">3D</div></div></div></section>
+    <section class="section gallery"><div class="section-heading"><div><p class="eyebrow dark">HECHO EN KMC 3D</p><h2>MIRA LO QUE<br><span>HEMOS CREADO.</span></h2></div><p>Algunas de las figuras que han pasado por nuestro taller. Pregúntanos por la que llamó tu atención.</p></div><div class="gallery-grid">
+<article><img src="vitrina-kmc/img/sonic.png" alt="Figura 3D de Sonic" loading="lazy"><div><h3>SONIC</h3><a href="https://wa.me/56948192023?text=Hola%2C%20quiero%20consultar%20por%20la%20figura%20de%20Sonic." target="_blank" rel="noopener noreferrer">Consultar</a></div></article>
+<article><img src="vitrina-kmc/img/jett.png" alt="Figura 3D de Jett" loading="lazy"><div><h3>JETT</h3><a href="https://wa.me/56948192023?text=Hola%2C%20quiero%20consultar%20por%20la%20figura%20de%20Jett." target="_blank" rel="noopener noreferrer">Consultar</a></div></article>
+<article><img src="vitrina-kmc/img/yuji.png" alt="Figura 3D de Yuji Itadori" loading="lazy"><div><h3>YUJI ITADORI</h3><a href="https://wa.me/56948192023?text=Hola%2C%20quiero%20consultar%20por%20la%20figura%20de%20Yuji%20Itadori." target="_blank" rel="noopener noreferrer">Consultar</a></div></article>
+<article><img src="vitrina-kmc/img/heisenberg.png" alt="Figura 3D de Heisenberg" loading="lazy"><div><h3>HEISENBERG</h3><a href="https://wa.me/56948192023?text=Hola%2C%20quiero%20consultar%20por%20la%20figura%20de%20Heisenberg." target="_blank" rel="noopener noreferrer">Consultar</a></div></article>
+<article><img src="vitrina-kmc/img/perry.png" alt="Figura 3D de Perry" loading="lazy"><div><h3>PERRY</h3><a href="https://wa.me/56948192023?text=Hola%2C%20quiero%20consultar%20por%20la%20figura%20de%20Perry." target="_blank" rel="noopener noreferrer">Consultar</a></div></article>
+<article><img src="vitrina-kmc/img/buu.png" alt="Figura 3D de Super Buu" loading="lazy"><div><h3>SUPER BUU</h3><a href="https://wa.me/56948192023?text=Hola%2C%20quiero%20consultar%20por%20la%20figura%20de%20Super%20Buu." target="_blank" rel="noopener noreferrer">Consultar</a></div></article>
+</div><p class="gallery-note">Los trabajos se muestran como referencia. Consulta por modelos, disponibilidad y personalización.</p><a class="button primary" href="catalogo.html">Ver catálogo completo</a></section>
+    <section id="categorias" class="section categories"><div class="section-heading"><div><p class="eyebrow">MÁS FORMAS DE SORPRENDER</p><h2>UNA IDEA,<br><span>MUCHAS FORMAS.</span></h2></div><p>Además de figuras, creamos detalles para regalar, celebrar y recordar.</p></div><div class="category-grid"><article class="category"><div class="category-image"><img src="vitrina-kmc/img/taza.png" alt="Ejemplo de taza estampada" loading="lazy"></div><div class="category-body"><p>PARA REGALAR O DISFRUTAR</p><h3>TAZAS ESTAMPADAS</h3><span>Un diseño especial para acompañar todos los días.</span><a href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20quiero%20cotizar%20una%20taza%20estampada." target="_blank" rel="noopener noreferrer">Cotizar taza ↗</a></div></article><article class="category"><div class="category-image"><img src="vitrina-kmc/img/laser.png" alt="Trabajo de grabado láser" loading="lazy"></div><div class="category-body"><p>PARA MOMENTOS ESPECIALES</p><h3>RECORDATORIOS DE MADERA</h3><span>Detalles que guardan un momento para siempre.</span><a href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20quiero%20cotizar%20recordatorios%20de%20madera." target="_blank" rel="noopener noreferrer">Cotizar recordatorios ↗</a></div></article></div></section>
+    <section id="como-pedir" class="section process"><div class="section-heading"><div><p class="eyebrow dark">ASÍ DE SIMPLE</p><h2>DE TU IDEA<br><span>A TUS MANOS.</span></h2></div><p>Cuéntanos qué buscas y conversemos los detalles de tu pedido.</p></div><div class="steps"><article><b>01</b><h3>ELIGE TU IDEA</h3><p>Una figura, una taza o un recuerdo especial. Una foto de referencia también ayuda.</p></article><article><b>02</b><h3>HABLEMOS</h3><p>Escríbenos por WhatsApp para revisar los detalles y solicitar tu cotización.</p></article><article><b>03</b><h3>ACORDEMOS TU PEDIDO</h3><p>Te informaremos el precio, los plazos y las opciones de entrega según tu solicitud.</p></article></div></section>
+    <section class="contact"><div><p class="eyebrow">¿TIENES UNA IDEA?</p><h2>HAGÁMOSLA<br><span>REALIDAD.</span></h2><p>Tu próxima figura o regalo comienza con un mensaje.</p><a class="button primary" href="https://wa.me/56948192023?text=Hola%20KMC%203D%2C%20quiero%20cotizar%20una%20idea." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a></div><div class="contact-mark">KMC<br><span>3D</span><small>CREAMOS<br>LO QUE IMAGINAS</small></div></section>
+  </main>
+  <footer><div><img src="vitrina-kmc/img/logo.png" alt="KMC 3D"><p>Figuras, ideas y regalos con personalidad.</p></div><div><strong>EXPLORA</strong><a href="catalogo.html">Catálogo de figuras</a><a href="#figuras">Figuras 3D</a><a href="#categorias">Tazas y recordatorios</a><a href="#como-pedir">Cómo pedir</a></div><div><strong>CONVERSEMOS</strong><a href="https://www.instagram.com/kmc_3d/" target="_blank" rel="noopener noreferrer">Instagram @kmc_3d</a><a href="https://wa.me/56948192023" target="_blank" rel="noopener noreferrer">WhatsApp</a></div><div class="copyright">© KMC 3D · Creaciones con personalidad</div></footer>
+</body>
 </html>
